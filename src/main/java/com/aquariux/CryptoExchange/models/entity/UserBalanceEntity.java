@@ -14,7 +14,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 
-@Entity
+@Entity(name = "tb_user_balance")
 @Getter
 @Setter
 @AllArgsConstructor

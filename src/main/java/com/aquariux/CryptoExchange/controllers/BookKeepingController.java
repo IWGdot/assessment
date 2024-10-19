@@ -22,7 +22,7 @@ public class BookKeepingController {
 
     @PostMapping("/get/user/balance")
     public ResponseEntity getUserBalance(@RequestHeader String username) {
-        log.info("Hit - /get/user/balance, without request");
+        log.info("Hit - /get/user/balance");
         GetUserBalanceResponse response = bookKeepingService.getUserBalance(username);
         if (Objects.nonNull(response.getErrorResponse())) {
             return new ResponseEntity(response.getErrorResponse(), HttpUtils.getStatusCode(response.getErrorResponse().getErrorCode()));

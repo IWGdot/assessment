@@ -10,4 +10,6 @@ import java.util.List;
 public interface UserBalanceRepository extends JpaRepository<UserBalanceEntity, Long> {
 
     List<UserBalanceEntity> findByUsername(String username);
+
+    List<UserBalanceEntity> findByUsernameAndTicker(String username, String ticker);
 }

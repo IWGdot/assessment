@@ -20,3 +20,11 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
 url:
   auth-service:
+
+logging:
+  level:
+    feign: debug
+
+feign:
+  hystrix:
+    enabled: true
